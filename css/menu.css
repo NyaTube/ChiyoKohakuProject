@@ -184,6 +184,7 @@ nav {
 
     .menu ul li a {
         padding: 0 1em;
+        border-top: none;
         border-bottom: none;
     }
 

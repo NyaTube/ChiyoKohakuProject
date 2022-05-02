@@ -1,0 +1,193 @@
+nav {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+.drawer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 70px;
+    padding: 0 1em;
+}
+
+/*ナビゲーション部分*/
+
+.logo {
+    font-size: 1.5rem;
+    width: max-content;
+}
+
+.menu ul {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu ul li {
+    width: 100%;
+}
+
+.menu ul li a {
+    display: block;
+    font-weight: bold;
+    padding: 2em;
+    border-top: 2px dotted #2BB7B3;
+    border-bottom: 2px dotted #2BB7B3;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #f5f5f5 (0, 0, 0, 0.5);
+    color: orange;
+}
+
+.menu {
+    text-align: center;
+    background-color: #f5f5f5;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    transition: .3s ease;
+    height: 100vh;
+    overflow: auto;
+    /*滑らかに表示*/
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+    /*左に隠しておく*/
+}
+
+/*OPEN時の動き*/
+.menu.open {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    position: fixed;
+    z-index: 997;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+    display: block;
+    position: fixed;
+    /* bodyに対しての絶対位置指定 */
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 999;
+    right: 15px;
+}
+
+.Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #2BB7B3;
+    -webkit-transition: .35s ease-in-out;
+    /*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;
+    /*変化の速度を指定*/
+    transition: .35s ease-in-out;
+    /*変化の速度を指定*/
+}
+
+.Toggle span:nth-child(1) {
+    top: 5px;
+}
+
+.Toggle span:nth-child(2) {
+    top: 18px;
+}
+
+.Toggle span:nth-child(3) {
+    top: 32px;
+}
+
+.Toggle.active span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.Toggle span:nth-child(3)::after {
+    /*3つ目の要素のafterにMenu表示を指定*/
+    content: "Menu";
+    position: absolute;
+    top: 5px;
+    left: 0.7rem;
+    color: #2BB7B3;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+
+.Toggle.active span:nth-child(3)::after {
+    /*3つ目の要素のafterに空白表示を指定*/
+    content: "";
+}
+
+@media screen and (min-width: 600px) {
+    header::after {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .Toggle {
+        display: none;
+    }
+
+    .menu {
+        width: 100%;
+        height: auto;
+        position: unset;
+        background-color: transparent;
+        margin-top: 0;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .menu ul {
+        height: 70px;
+        position: unset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        top: unset;
+        left: unset;
+        transform: unset;
+    }
+
+    .menu ul li {
+        width: unset;
+    }
+
+    .menu ul li a {
+        padding: 0 1em;
+        border-bottom: none;
+    }
+
+    .menu ul li a:hover {
+        background-color: transparent;
+    }
+}

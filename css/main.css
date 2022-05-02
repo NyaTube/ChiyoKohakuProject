@@ -1,0 +1,393 @@
+/* 標準 */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  color: #2BB7B3;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  z-index: 9998;
+  height: auto;
+  border-bottom: 1px solid
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+footer {
+  border-top: 1px solid;
+  height: 3rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.content_center {
+  justify-content: center;
+}
+
+.icons {
+  height: 50px;
+  width: 50px;
+}
+
+/* Vプロフィール */
+
+.v_img {
+  width: auto;
+  max-width: inherit;
+  text-align: center;
+}
+
+.v_img img {
+  width: 100%;
+  max-width: inherit;
+  height: auto;
+}
+
+.v_profile {
+  width: 100%;
+}
+
+/* Vプロフィール終わり */
+
+.twitter_area {
+  width: 100%;
+  padding: 1rem;
+  /* margin: auto; */
+}
+
+.self_introduction {
+  width: 100%;
+  padding: 1rem;
+}
+
+.self_introduction h1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.self_introduction_text {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.self_introduction dl {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.self_introduction dt {
+  background: #ddd;
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.self_introduction dd {
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+.self_introduction dd a {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) {
+
+  .v_img {
+    width: 50%;
+    padding: 1rem;
+  }
+
+  .v_img img {
+    width: auto;
+    max-width: -webkit-fill-available;
+    height: auto;
+    /* max-height: 80vh; */
+  }
+
+  .v_profile {
+    width: 50%;
+    padding: 1rem;
+  }
+
+  .twitter_area {
+    width: 50%;
+    padding: 1rem;
+    /* margin: auto; */
+  }
+
+  .self_introduction {
+    width: 50%;
+    padding: 1rem;
+  }
+}
+
+.v_profile h1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.v_profile h2 {
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.v_profile_text {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.col_auto {
+  /* /* flex:0 0 auto; */
+  width: auto;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+/* ボタン関連 */
+
+.btn_position {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.btn {
+  /*影の基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  border: solid 2px #2b61fa;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.btn span {
+  position: relative;
+  display: block;
+  padding: 10px 30px;
+  background: #fff;
+  color: #2b61fa;
+  transition: all 0.3s ease;
+}
+
+/*押下をした後のボタンの形状*/
+.btn:active {
+  border-color: transparent;
+  transform: translateY(0.25rem);
+}
+
+@media screen and (min-width: 600px) {
+
+  .btn {
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    border: solid 2px #2b61fa;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+    width: 95%;
+  }
+}
+
+/* ボタン関連終わり */
+
+.modal {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal_bg {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.modal_content {
+  background: #ddd;
+  color: #000;
+  left: 50%;
+  padding: 40px;
+  /* position: absolute; */
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 30%;
+  position: relative;
+}
+
+.js-modal-close {
+  position: absolute;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 600px) {
+
+  .modal_content {
+    background: #ddd;
+    color: #000;
+    left: 50%;
+    padding: 40px;
+    /* position: absolute; */
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+    position: relative;
+  }
+}
+
+
+/* ページトップ */
+
+/*リンクを右下に固定*/
+#page_top {
+  position: fixed;
+  right: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(300px);
+}
+
+/*　上に上がる動き　*/
+
+#page_top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page_top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+#page_top img {
+  width: auto;
+  height: 60px;
+}
+
+
+/* Loading */
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: #333;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo h1 {
+  font-size: 2.5rem;
+  color: #ACB6E5;
+  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.share_btn {
+  padding: 0.5rem;
+}

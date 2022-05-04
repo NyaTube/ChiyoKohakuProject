@@ -65,10 +65,10 @@ $(function() {
   
 //logoの表示
 $(window).on('load',function(){
-    //ローディング画面を2秒（2000ms）待機してからフェードアウト
-    $("#splash").delay(2000).fadeOut('slow');
+    //ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+    $("#splash").delay(1500).fadeOut('slow');
     //ロゴを1.5秒（1500ms）待機してからフェードアウト
-    $("#splash_logo").delay(1500).fadeOut('slow');
+    $("#splash_logo").delay(1000).fadeOut('slow');
   });
 
 

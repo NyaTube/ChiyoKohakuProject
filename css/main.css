@@ -82,7 +82,7 @@ footer {
   padding: 1rem;
 }
 
-.self_introduction h1 {
+.self_introduction h2 {
   text-align: center;
   padding: 1rem;
   font-size: 2.5rem;
@@ -142,14 +142,12 @@ footer {
     width: 75%;
     margin: auto;
     padding: 1rem;
-    /* margin: auto; */
   }
 
   .self_introduction {
     width: 50%;
     padding: 1rem;
   }
-}
 
 .v_profile h1 {
   text-align: center;

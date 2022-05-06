@@ -128,9 +128,9 @@ footer {
 
   .v_img img {
     width: auto;
-    max-width: -webkit-fill-available;
+    max-width: 100%;
     height: auto;
-    /* max-height: 80vh; */
+    max-height: 100%;
   }
 
   .v_profile {
@@ -231,56 +231,6 @@ footer {
 
 /* ボタン関連終わり */
 
-.modal {
-  display: none;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.modal_bg {
-  background: rgba(0, 0, 0, 0.8);
-  height: 100vh;
-  position: absolute;
-  width: 100%;
-}
-
-.modal_content {
-  background: #ddd;
-  color: #000;
-  left: 50%;
-  padding: 40px;
-  /* position: absolute; */
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 30%;
-  position: relative;
-}
-
-.js-modal-close {
-  position: absolute;
-  bottom: 10px;
-}
-
-@media screen and (min-width: 600px) {
-
-  .modal_content {
-    background: #ddd;
-    color: #000;
-    left: 50%;
-    padding: 40px;
-    /* position: absolute; */
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: 30%;
-    position: relative;
-  }
-}
-
-
 /* ページトップ */
 
 /*リンクを右下に固定*/
@@ -367,9 +317,7 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
-/*==================================================
-ふわっ
-===================================*/
+/*ふわっ*/
 .effect_fade {
     opacity : 0;
     transform : translate(0, 0);

@@ -17,7 +17,7 @@ $(window).on('load',function(){
     }
 
     const videoUrl1 = "https://www.youtube.com/embed/PRNlkmDbcA8";
-    const videoUrl2 = "https://www.youtube.com/embed/6oeLAo6DFHI";
+    const videoUrl2 = "https://www.youtube.com/embed/uUahqeHoZd4";
     const videoUrl3 = "https://www.youtube.com/embed/GWcJei1vpqk";
     const videoUrl4 = "https://www.youtube.com/embed/Zb5EgTnkbyg";
 

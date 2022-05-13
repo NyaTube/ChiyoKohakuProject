@@ -1,21 +1,33 @@
-window.onload = function() {
-    scroll_effect();
-  
-    $(window).scroll(function(){
-     scroll_effect();
+$(window).on('load',function(){
+    // scroll_effect();
+
+    $(window).scroll(function () {
+        scroll_effect();
     });
-  
-    function scroll_effect(){
-     $('.effect_fade').each(function(){
-      var elemPos = $(this).offset().top;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll > elemPos - windowHeight){
-       $(this).addClass('effect_scroll');
-      }
-     });
+
+    function scroll_effect() {
+        $('.effect_fade').each(function () {
+            var elemPos = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > elemPos - windowHeight) {
+                $(this).addClass('effect_scroll');
+            }
+        });
     }
-  };
+
+    const videoUrl1 = "https://www.youtube.com/embed/PRNlkmDbcA8";
+    const videoUrl2 = "https://www.youtube.com/embed/6oeLAo6DFHI";
+    const videoUrl3 = "https://www.youtube.com/embed/GWcJei1vpqk";
+    const videoUrl4 = "https://www.youtube.com/embed/Zb5EgTnkbyg";
+
+    const srcArray = [videoUrl1,videoUrl2,videoUrl3,videoUrl4];
+
+    const selectVideos = Math.floor(Math.random() * 5);
+
+    $('.recommended_videos').children('iframe').attr("src",srcArray[selectVideos]);
+
+});
 
 // ページトップ関連のアニメ
 function PageTopAnime() {
@@ -55,20 +67,19 @@ $(window).on('load', function () {
     PageTopAnime();
 });
 
-$(function() {
+$(function () {
     //page_topをクリックするとページのトップへ移動
     $('#page_top').click(function () {
-      $('body, html').animate({ scrollTop: 0 }, 500);
-      return false;
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
     });
-  });
-  
+});
+
 //logoの表示
-$(window).on('load',function(){
+$(window).on('load', function () {
     //ローディング画面を1.5秒（1500ms）待機してからフェードアウト
     $("#splash").delay(1500).fadeOut('slow');
     //ロゴを1.5秒（1500ms）待機してからフェードアウト
     $("#splash_logo").delay(1000).fadeOut('slow');
-  });
-
+});
 

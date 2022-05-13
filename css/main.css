@@ -69,13 +69,33 @@ footer {
   width: 100%;
 }
 
-/* Vプロフィール終わり */
+.v_profile h1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.v_profile h2 {
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.v_profile_text {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #330000;
+}
+
+
+/* Twitterエリア */
 
 .twitter_area {
   width: 100%;
   padding: 1rem;
-  /* margin: auto; */
 }
+
+/* 自己紹介 */
 
 .self_introduction {
   width: 100%;
@@ -119,7 +139,31 @@ footer {
   text-decoration: underline;
 }
 
+/* おすすめ動画 */
+
+.recommended_videos_area {
+  padding: 1rem;
+  width: 100%;
+}
+
+.recommended_videos_area h2{
+  text-align: center;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.recommended_videos {
+  aspect-ratio: 16/9;
+}
+
+.recommended_videos iframe {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 600px) {
+
+  /* Vプロフィール */
 
   .v_img {
     width: 50%;
@@ -138,40 +182,32 @@ footer {
     padding: 1rem;
   }
 
+  /* Twitterエリア */
+
   .twitter_area {
     width: 75%;
     margin: auto;
     padding: 1rem;
   }
 
+  /* 自己紹介 */
+
   .self_introduction {
     width: 50%;
     padding: 1rem;
   }
-}
-.v_profile h1 {
-  text-align: center;
-  padding: 1rem;
-  font-size: 2.5rem;
-}
 
-.v_profile h2 {
-  text-align: center;
-  padding: 0.3rem;
-  font-size: 1rem;
-}
+  /* おすすめ動画 */
 
-.v_profile_text {
-  padding: 1rem;
-  font-size: 1.2rem;
-  color: #330000;  
-}
+  .recommended_videos_area {
+    padding: 1rem;
+  }
 
-.col_auto {
-  /* /* flex:0 0 auto; */
-  width: auto;
-  padding: 1rem;
-  margin: 0.5rem;
+  .recommended_videos {
+    width: 75%;
+    margin: auto;
+  }
+
 }
 
 /* ボタン関連 */
@@ -319,15 +355,16 @@ footer {
 
 /*ふわっ*/
 .effect_fade {
-    opacity : 0;
-    transform : translate(0, 0);
-    transition : all 2500ms;
-  }
-  
-  .effect_fade.effect_scroll {
-    opacity : 1;
-    transform : translate(0, 0);
-  }
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: all 2500ms;
+}
+
+.effect_fade.effect_scroll {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 /* fadeUpをするアイコンの動き */
 
 .fadeUp {
@@ -349,10 +386,10 @@ footer {
   }
 }
 
-  /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
-   
-  .fadeUpTrigger{
-    opacity: 0;
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.fadeUpTrigger {
+  opacity: 0;
 }
 
 .share_btn {

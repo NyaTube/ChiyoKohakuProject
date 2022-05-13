@@ -1,5 +1,5 @@
 $(window).on('load',function(){
-    // scroll_effect();
+    scroll_effect();
 
     $(window).scroll(function () {
         scroll_effect();
@@ -10,7 +10,7 @@ $(window).on('load',function(){
             var elemPos = $(this).offset().top;
             var scroll = $(window).scrollTop();
             var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight) {
+            if (scroll > elemPos - windowHeight + 5) {
                 $(this).addClass('effect_scroll');
             }
         });

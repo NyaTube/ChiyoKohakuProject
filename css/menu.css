@@ -52,25 +52,18 @@ nav {
     position: fixed;
     z-index: 998;
     top: 0;
-    transition: .3s ease;
     height: 100vh;
     overflow: auto;
-    /*滑らかに表示*/
-    -webkit-transform: translateX(-105%);
-    transform: translateX(-105%);
-    /*左に隠しておく*/
+    right: -100%;
+    width: 100%;
+    transition:all 0.5s ease-in-out;
+    
 }
 
 /*OPEN時の動き*/
 .menu.open {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    position: fixed;
-    z-index: 997;
-    top: 0;
+    right: 0%;
     width: 100%;
-    height: 100vh;
-    overflow: auto;
 }
 
 /*トグルボタンのスタイルを指定*/
